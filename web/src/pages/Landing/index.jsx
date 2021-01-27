@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
+import EventItem from '../../components/EventItem'
+import Header from '../../components/Header'
 
 function Landing() {
   const [events, setEvents] = useState([]);
@@ -22,15 +24,11 @@ function Landing() {
 
 
   return (
-    <div>
-      {events.map((item, index) => {
-        return (
-          <div>
-            <h4 key={index}>year: {item.year}</h4>
-            <h4 key={index}>{item.description}</h4>
-          </div>
-        )
-      })}
+    <div className="landing">
+      <Header />
+      <div className="main-content">
+        
+      </div>
     </div>
   );
 }
