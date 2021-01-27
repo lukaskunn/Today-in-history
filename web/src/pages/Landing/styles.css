@@ -1,0 +1,11 @@
+.main-content {
+    width: 100vw;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 5vw;
+    margin-right: 10vw;
+}
+

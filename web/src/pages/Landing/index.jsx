@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
+import Header from '../../components/Header'
+import ItemCard from '../../components/ItemCard'
+
+import './styles.css'
 
 function Landing() {
   const [events, setEvents] = useState([]);
@@ -22,15 +26,13 @@ function Landing() {
 
 
   return (
-    <div>
-      {events.map((item, index) => {
-        return (
-          <div>
-            <h4 key={index}>year: {item.year}</h4>
-            <h4 key={index}>{item.description}</h4>
-          </div>
-        )
-      })}
+    <div className="landing">
+      <Header className="header"/>
+      <div className="main-content">
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+      </div>
     </div>
   );
 }
