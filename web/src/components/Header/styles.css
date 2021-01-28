@@ -1,0 +1,20 @@
+.header {
+    width: 100vw;
+    left: 0;
+    margin-left: -10px;
+    margin-top: -10px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+.title{
+    color: blue;
+    background-color: greenyellow;
+    width: 80vw;
+    text-align: left;
+    font-size: 3.5rem;
+}
+

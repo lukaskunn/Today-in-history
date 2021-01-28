@@ -1,0 +1,17 @@
+.item-card{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 80vw;
+    height: 100px;
+    background-color: violet;
+    color: white;
+    border-radius: 15px;
+    border-color: violet;
+    margin-bottom: 10px;
+
+}
+
+text-align: left;
+font-size: 3.5rem;
