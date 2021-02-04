@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
 import Header from '../../components/Header'
 import ItemCard from '../../components/ItemCard'
-import shuffleArray from '../../functions/shuffleArray'
+import shuffleArray from '../../functions/shuffleArray';
+import SeeMoreButton from '../../components/SeeMoreButton'
 
+import RightArrow from '../../images/right-arrow.svg'
 import './styles.css'
 
 function Landing() {
@@ -34,12 +36,32 @@ function Landing() {
     <div id="landing">
       <Header className="header" />
       <main>
-        <fieldset className="main-content">
+        <fieldset className="events">
           <legend>Events</legend>
           <ItemCard />
           <ItemCard />
           <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <SeeMoreButton path="/events" />
         </fieldset>
+        <fieldset className="births">
+          <legend>Births</legend>
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+        </fieldset>
+        <fieldset className="deaths">
+          <legend>Deaths</legend>
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+        </fieldset>
+        <img src={RightArrow} alt="seta pra direita" width="100"/>
       </main>
 
     </div>

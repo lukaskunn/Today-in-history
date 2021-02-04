@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
     top: 0;
     width: 50%;
     height: 100vh;
-    background-color: var(--xiketic);
+    background-color: #090909;
     color: white;
     font-family: Open-Sans, Helvetica, Sans-Serif;
     font-size: 1.3rem;

@@ -3,7 +3,7 @@
     left: 0;
     margin-left: -10px;
     margin-top: -10px;
-    background-color: red;
+    background-image: url("../../images/bg-categoria-historia2.jpg");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,8 +11,7 @@
 }
 
 .title{
-    color: blue;
-    background-color: greenyellow;
+    color: white;
     width: 80vw;
     text-align: left;
     font-size: 3.5rem;
