@@ -32,9 +32,24 @@ function Landing() {
     <div id="landing">
       <Header className="header" />
       <main>
-        <fieldset className="main-content">
+        <fieldset className="events">
           <legend>Events</legend>
           <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+        </fieldset>
+        <fieldset className="births">
+          <legend>Births</legend>
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+        </fieldset>
+        <fieldset className="deaths">
+          <legend>Deaths</legend>
           <ItemCard />
           <ItemCard />
           <ItemCard />
