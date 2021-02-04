@@ -34,15 +34,12 @@ function Landing() {
       <main>
         <fieldset className="main-content">
           <legend>Events</legend>
-          {events.map((item, index) => {
-            return (
-              <ItemCard
-                year={item.year}
-                description={item.description}
-                key={index}
-              />
-            )
-          })}
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
         </fieldset>
       </main>
 
