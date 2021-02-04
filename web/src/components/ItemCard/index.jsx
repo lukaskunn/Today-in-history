@@ -9,7 +9,7 @@ function ItemCard(props) {
                 <p>imagem </p>
             </div>
             <div className="content">
-                <h3 className="year">1993</h3>
+                <h2 className="year">1993</h2>
                 <h4 className="description">
                     "Vandal king Huneric organises a conference
                     between Catholic and Arian bishops
