@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
 import Header from '../../components/Header'
 import ItemCard from '../../components/ItemCard'
+import shuffleArray from '../../functions/shuffleArray'
 
 import './styles.css'
 
@@ -17,11 +18,15 @@ function Landing() {
   async function getData(e) {
     const response = await api.get('/');
 
-    console.log(response.data.events);
+    console.log('ok')
 
-    setEvents(response.data.events);
-    setBirths(response.data.births);
-    setDeaths(response.data.deaths);
+    let tempEvents = shuffleArray(response.data.events, 10);
+    let tempBirths = shuffleArray(response.data.births, 10);
+    let tempDeaths = shuffleArray(response.data.deaths, 10);
+
+    setEvents(tempEvents);
+    setBirths(tempBirths);
+    setDeaths(tempDeaths);
   }
 
 
@@ -31,15 +36,9 @@ function Landing() {
       <main>
         <fieldset className="main-content">
           <legend>Events</legend>
-          {events.map((item, index) => {
-            return (
-              <ItemCard
-                year={item.year}
-                description={item.description}
-                key={index}
-              />
-            )
-          })}
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
         </fieldset>
       </main>
 
