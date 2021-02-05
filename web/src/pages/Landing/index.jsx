@@ -3,10 +3,10 @@ import api from '../../services/api';
 import Header from '../../components/Header'
 import ItemCard from '../../components/ItemCard'
 import shuffleArray from '../../functions/shuffleArray';
-import SeeMoreButton from '../../components/SeeMoreButton'
+import seeMoteButton from '../../components/SeeMoreButton'
 
-import RightArrow from '../../images/right-arrow.svg'
 import './styles.css'
+import SeeMoreButton from '../../components/SeeMoreButton';
 
 function Landing() {
   const [events, setEvents] = useState([]);
@@ -20,48 +20,38 @@ function Landing() {
   async function getData(e) {
     const response = await api.get('/');
 
-    console.log('ok')
-
-    let tempEvents = shuffleArray(response.data.events, 10);
-    let tempBirths = shuffleArray(response.data.births, 10);
-    let tempDeaths = shuffleArray(response.data.deaths, 10);
-
-    setEvents(tempEvents);
-    setBirths(tempBirths);
-    setDeaths(tempDeaths);
+    let size = 5;
+    
+    setEvents(shuffleArray(response.data.events, size));
+    setBirths(shuffleArray(response.data.births, size));
+    setDeaths(shuffleArray(response.data.deaths, size));
   }
-
 
   return (
     <div id="landing">
       <Header className="header" />
       <main>
-        <fieldset className="events">
+      <fieldset className="events">
           <legend>Events</legend>
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <SeeMoreButton path="/events" />
+          {events.map((item, index) => {
+            return <ItemCard year={item.year} description={item.description} key={index} />
+          })}
+          <SeeMoreButton path="/events"/>
         </fieldset>
         <fieldset className="births">
           <legend>Births</legend>
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
+          {births.map((item, index) => {
+            return <ItemCard year={item.year} description={item.description} key={index} />
+          })}
+          <SeeMoreButton path="/births"/>
         </fieldset>
         <fieldset className="deaths">
           <legend>Deaths</legend>
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
-          <ItemCard />
+          {deaths.map((item, index) => {
+            return <ItemCard year={item.year} description={item.description} key={index} />
+          })}
+          <SeeMoreButton path="/deaths"/>
         </fieldset>
-        <img src={RightArrow} alt="seta pra direita" width="100"/>
       </main>
 
     </div>
