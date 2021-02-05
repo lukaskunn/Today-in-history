@@ -1,0 +1,23 @@
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: right;   
+}
+
+.see-more {
+    color: white;
+}
+
+.see-more Link {
+    text-decoration: none;
+}
+
+.see-more:hover {
+    text-decoration: none;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
