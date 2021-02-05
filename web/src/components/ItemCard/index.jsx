@@ -9,11 +9,9 @@ function ItemCard(props) {
                 <p>imagem </p>
             </div>
             <div className="content">
-                <h2 className="year">1993</h2>
+                <h2 className="year">{props.year}</h2>
                 <h4 className="description">
-                    "Vandal king Huneric organises a conference
-                    between Catholic and Arian bishops
-                    at Carthage."
+                    {props.description}
             </h4>
             </div>
         </div>
