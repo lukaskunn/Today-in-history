@@ -1,9 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Header from '../../components/Header'
+import ItemCard from '../../components/ItemCard'
+import api from '../../services/api'
 
-// import { Container } from './styles';
+import './styles.css'
 
 function Births() {
-  return <div />;
+  const [births, setBirths] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, [])
+
+  async function getData(e) {
+    const response = await api.get('/');
+    setBirths(response.data.births);
+  }
+
+  return (
+    <div className="births-container">
+      <Header />
+      <main>
+        <fieldset className="births">
+          <legend>Births</legend>
+          {births.map((item, index) => {
+            return <ItemCard year={item.year} description={item.description} wikipedia={item.wikipedia[0].wikipedia} key={index} />
+          })}
+        </fieldset>
+      </main>
+    </div>
+
+  );
 }
 
 export default Births;
