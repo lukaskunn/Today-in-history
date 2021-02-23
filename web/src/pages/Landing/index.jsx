@@ -21,7 +21,7 @@ function Landing() {
     const response = await api.get('/');
 
     let size = 5;
-    
+
     setEvents(shuffleArray(response.data.events, size));
     setBirths(shuffleArray(response.data.births, size));
     setDeaths(shuffleArray(response.data.deaths, size));
@@ -31,26 +31,34 @@ function Landing() {
     <div id="landing">
       <Header className="header" />
       <main>
-      <fieldset className="events">
+        <fieldset className="events">
           <legend>Events</legend>
           {events.map((item, index) => {
-            return <ItemCard year={item.year} description={item.description} key={index} />
+            return <ItemCard year={item.year} description={item.description} wikipedia={item.wikipedia[0].wikipedia} key={index} />
           })}
-          <SeeMoreButton path="/events"/>
+          <SeeMoreButton path="/events" />
         </fieldset>
         <fieldset className="births">
           <legend>Births</legend>
           {births.map((item, index) => {
-            return <ItemCard year={item.year} description={item.description} key={index} />
+            return <ItemCard
+              year={item.year}
+              description={item.description}
+              wikipedia={item.wikipedia[0].wikipedia}
+              key={index} />
           })}
-          <SeeMoreButton path="/births"/>
+          <SeeMoreButton path="/births" />
         </fieldset>
         <fieldset className="deaths">
           <legend>Deaths</legend>
           {deaths.map((item, index) => {
-            return <ItemCard year={item.year} description={item.description} key={index} />
+            return <ItemCard
+              year={item.year}
+              description={item.description}
+              wikipedia={item.wikipedia[0].wikipedia}
+              key={index} />
           })}
-          <SeeMoreButton path="/deaths"/>
+          <SeeMoreButton path="/deaths" />
         </fieldset>
       </main>
 
