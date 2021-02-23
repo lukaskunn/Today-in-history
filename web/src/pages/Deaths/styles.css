@@ -1,0 +1,43 @@
+.births-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    width: 100%;
+    max-width: 74rem;
+    border-radius: 0.8rem;
+    margin: -3.2rem auto 3.2rem;
+    padding-top: 6.4rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main fieldset {
+    border: 0;
+    padding: 0 2.4rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main fieldset + fieldset{
+    margin-top: 6.4rem;
+}
+
+main fieldset legend{
+    font: 700 2.4rem helvetica;
+    display: flex;
+    align-items: center;
+    width: 95%;
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid white;
+    margin-bottom: 40px;
+    margin-left: 20px;
+}
+
+
