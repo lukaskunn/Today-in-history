@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '../../components/Header'
 import ItemCard from '../../components/ItemCard'
 import api from '../../services/api'
-
+import ReturnButton from '../../components/ReturnButton'
 import './styles.css'
 
 function Events() {
@@ -21,6 +21,7 @@ function Events() {
     <div className="events-container">
       <Header />
       <main>
+        <ReturnButton />
         <fieldset className="events">
           <legend>Events</legend>
           {events.map((item, index) => {

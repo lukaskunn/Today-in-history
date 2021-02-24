@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '../../components/Header'
 import ItemCard from '../../components/ItemCard'
 import api from '../../services/api'
+import ReturnButton from '../../components/ReturnButton'
 
 import './styles.css'
 
@@ -21,6 +22,7 @@ function Deaths() {
     <div className="deaths-container">
       <Header />
       <main>
+        <ReturnButton />
         <fieldset className="deaths">
           <legend>Deaths</legend>
           {deaths.map((item, index) => {

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../../components/Header'
 import ItemCard from '../../components/ItemCard'
-import api from '../../services/api'
+import ReturnButton from '../../components/ReturnButton'
 
+import api from '../../services/api'
 import './styles.css'
 
 function Births() {
@@ -21,6 +22,7 @@ function Births() {
     <div className="births-container">
       <Header />
       <main>
+      <ReturnButton />
         <fieldset className="births">
           <legend>Births</legend>
           {births.map((item, index) => {
