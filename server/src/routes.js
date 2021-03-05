@@ -6,6 +6,7 @@ const routes = Router();
 routes.get('/', async (request, response) => {
     const data = await axios.get('https://vast-savannah-48666.herokuapp.com/date')
 
+    console.log(data.data.events.length)
     return response.send(data.data);
 });
 
