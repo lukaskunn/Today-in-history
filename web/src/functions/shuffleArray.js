@@ -8,7 +8,7 @@ function shuffle(array, size) {
     newArray.push(randomItem);
   }
 
-  newArray.sort(dynamicSort('year'));
+  //newArray.sort(dynamicSort('year'));
   return newArray;
 }
 
